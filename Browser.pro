@@ -12,11 +12,13 @@ CONFIG += c++11
 SOURCES += \
     browser.cpp \
     main.cpp \
-    browserwindow.cpp
+    browserwindow.cpp \
+    tabwidget.cpp
 
 HEADERS += \
     browser.h \
-    browserwindow.h
+    browserwindow.h \
+    tabwidget.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

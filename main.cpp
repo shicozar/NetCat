@@ -3,6 +3,7 @@
 
 #include <QApplication>
 #include <QWebEngineSettings>
+#include <QUrl>
 
 QUrl commandLineUrlArgument()
 {
@@ -23,9 +24,10 @@ int main(int argc, char *argv[])
     QUrl url = commandLineUrlArgument();
 
     QApplication app(argc, argv);
+    app.setWindowIcon(QIcon(QStringLiteral(":")));
     Browser browser ;
     BrowserWindow *window=browser.createWindow();
     window->tabWidget()->setUrl(url);
-
+    window->show();
     return app.exec();
 }
