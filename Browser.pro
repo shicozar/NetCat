@@ -1,5 +1,6 @@
 QT       += core gui
 QT       += webenginewidgets
+QT += webkitwidgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,12 +14,14 @@ SOURCES += \
     browser.cpp \
     main.cpp \
     browserwindow.cpp \
-    tabwidget.cpp
+    tabwidget.cpp \
+    webview.cpp
 
 HEADERS += \
     browser.h \
     browserwindow.h \
-    tabwidget.h
+    tabwidget.h \
+    webview.h
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
